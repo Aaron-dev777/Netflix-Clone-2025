@@ -7,28 +7,73 @@
   background-color: rgb(20, 20, 20);
   height: 10vh;
   color: white;
-  transition: all 0.5s;
-  transition-timing-function: ease-in;
-  z-index: 1;
+  transition: all 0.5s ease-in;
+  z-index: 10;
 }
 
+/* Netflix Logo - Always Visible */
+.header_logo {
+  display: block;
+  width: 120px; /* Adjust logo size */
+  height: auto;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  z-index: 11; /* Ensure it's on top */
+}
+
+/* Menu - Default style for large screens */
 .header_inner {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 85%;
   align-items: center;
 }
 
-.header_left ul {
+/* Navigation Lists */
+.header_left ul,
+.header_right ul {
   display: flex;
   list-style: none;
   gap: 2rem;
   align-items: center;
 }
 
-.header_right ul {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-  align-items: center;
+/* ✅ Responsive Media Query for Small Screens */
+@media screen and (max-width: 768px) {
+  .header_outer {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem 0;
+  }
+
+  /* Keep only the logo visible initially */
+  .header_inner {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Ensure logo is always visible and centered */
+  .header_logo {
+    width: 100px; /* Smaller logo for mobile */
+    margin-bottom: 0.5rem;
+  }
+
+  /* When hovering over the header, show the menu */
+  .header_outer:hover .header_inner {
+    max-height: 380px; /* Adjust height as needed */
+  }
+
+  /* Hide menu items by default */
+  .header_left ul,
+  .header_right ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+  }
 }

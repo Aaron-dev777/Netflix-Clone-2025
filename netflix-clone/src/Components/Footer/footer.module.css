@@ -49,3 +49,67 @@
   font-size: 12px;
   margin-bottom: 10px;
 }
+
+/* ✅ Responsive Footer for Small Screens */
+@media (max-width: 768px) {
+  .footer_outer {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .footer_inner {
+    width: 90%;
+    text-align: center;
+  }
+
+  /* Stack items vertically */
+  .footer_list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer_list ul {
+    align-items: center;
+    height: auto;
+    gap: 0.5rem;
+  }
+
+  /* Center social icons */
+  .footer_icon {
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+    height: 45px;
+  }
+
+  /* Adjust service code button */
+  .service_code {
+    width: 100%;
+    padding: 5px;
+    justify-content: center;
+  }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .footer_inner {
+    width: 95%;
+  }
+
+  .footer_list {
+    font-size: 0.9rem;
+  }
+
+  .footer_icon {
+    width: 60%;
+  }
+
+  .service_code {
+    width: 60%;
+  }
+
+  .copy_write {
+    font-size: 10px;
+  }
+}

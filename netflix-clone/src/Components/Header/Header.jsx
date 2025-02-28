@@ -9,12 +9,15 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 const Header = () => {
   return (
     <div className={styles.header_outer}>
+      <img
+        src={NetflixLogo}
+        alt="Netflix Logo"
+        width="100"
+        className={styles.header_logo}
+      />
       <div className={styles.header_inner}>
         <div className={styles.header_left}>
           <ul>
-            <li>
-              <img src={NetflixLogo} alt="Netflix Logo" width='100' />
-            </li>
             <li>Home</li>
             <li>Tv Shows</li>
             <li>Movies</li>
@@ -25,10 +28,18 @@ const Header = () => {
         </div>
         <div className={styles.header_right}>
           <ul>
-            <li><SearchIcon/></li>
-            <li><NotificationsNoneIcon/></li>
-            <li><AccountBoxIcon/></li>
-            <li><ArrowDropDownIcon/></li>
+            <li>
+              <SearchIcon />
+            </li>
+            <li>
+              <NotificationsNoneIcon />
+            </li>
+            <li>
+              <AccountBoxIcon />
+            </li>
+            <li>
+              <ArrowDropDownIcon />
+            </li>
           </ul>
         </div>
       </div>
