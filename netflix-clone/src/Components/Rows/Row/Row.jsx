@@ -46,33 +46,34 @@ const Row = ({ title, url, isLargeRow }) => {
     },
   };
   return (
-    <div className={styles.row}>
-      <h1>{title}</h1>
-      <div className={styles.row_poster}>
-        {movie?.map((movie, index) => (
-          <img
-            key={index}
-            className={`${styles.row_Image} ${
-              isLargeRow && styles.row_posterLarge
-            }`}
-            src={`${singleImage}${
-              isLargeRow ? movie.poster_path : movie.backdrop_path
-            }`}
-            alt={movie?.name || movie?.title || movie?.original_name}
-            onClick={()=> handleClick(movie)}
-          />
-        ))}
+
+      <div className={styles.row}>
+        <h1>{title}</h1>
+        <div className={styles.row_posters}>
+          {movie?.map((movie, index) => (
+            <img
+              key={index}
+              className={`${styles.row_poster} ${
+                isLargeRow && styles.row_posterLarge
+              }`}
+              src={`${singleImage}${
+                isLargeRow ? movie.poster_path : movie.backdrop_path
+              }`}
+              alt={movie?.name || movie?.title || movie?.original_name}
+              onClick={() => handleClick(movie)}
+            />
+          ))}
+        </div>
+        <div>
+          {trailerUrl && (
+            <Youtube
+              style={{ padding: "40px" }}
+              videoId={trailerUrl}
+              opts={opts}
+            />
+          )}
+        </div>
       </div>
-      <div>
-        {trailerUrl && (
-          <Youtube
-            style={{ padding: "40px" }}
-            videoId={trailerUrl}
-            opts={opts}
-          />
-        )}
-      </div>
-    </div>
   );
 };
 export default Row;

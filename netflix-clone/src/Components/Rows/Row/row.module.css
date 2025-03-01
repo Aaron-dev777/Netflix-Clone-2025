@@ -1,88 +1,29 @@
-.row {
-  margin-left: 20px;
-  color: white;
-}
 .row_poster {
-  display: flex;
-  overflow-y: hidden;
-  overflow-x: scroll;
-  padding: 3px;
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+    transition: transform 450ms;
+    margin-right: 10px;
 }
-.row_poster::-webkit-scrollbar {
-  display: none;
+.row_posters {
+display: flex;
+overflow-y: hidden;
+overflow-x: scroll;
+padding: 20px;
 }
-
-.row_Image {
-  width: 100%;
-  max-height: 100px;
-  object-fit: contain;
-  transition: transform 450ms;
-  margin-right: 10px;
+.row_posters::-webkit-scrollbar {
+    display: none;
 }
-
-.row_Image:hover {
-  transform: scale(1.08);
+.row_poster:hover {
+    transform: scale(1.08);
 }
-
 .row_posterLarge {
-  max-height: 250px;
+    max-height: 250px;
 }
-
 .row_posterLarge:hover {
-  transform: scale(1.09);
+    transform: scale(1.09);
 }
-
-/* Medium devices (tablets, max-width: 1024px) */
-@media (max-width: 1024px) {
-  .row {
-    margin-left: 10px; /* Reduce left margin */
-  }
-
-  .row_Image {
-    max-height: 90px; /* Reduce image size slightly */
-  }
-
-  .row_posterLarge {
-    max-height: 200px; /* Adjust larger images */
-  }
-}
-
-/* Small devices (phones, max-width: 768px) */
-@media (max-width: 768px) {
-  .row {
-    margin-left: 5px; /* Further reduce margin */
-  }
-
-  .row_poster {
-    padding: 10px; /* Reduce padding */
-  }
-
-  .row_Image {
-    max-height: 80px; /* Make images smaller */
-    margin-right: 5px; /* Reduce gap between images */
-  }
-
-  .row_posterLarge {
-    max-height: 180px;
-  }
-}
-
-/* Extra small devices (max-width: 480px) */
-@media (max-width: 480px) {
-  .row {
-    margin-left: 0px; /* Remove extra margin */
-  }
-
-  .row_poster {
-    padding: 5px; /* Reduce padding */
-  }
-
-  .row_Image {
-    max-height: 70px; /* Smaller images for tiny screens */
-    margin-right: 3px;
-  }
-
-  .row_posterLarge {
-    max-height: 150px;
-  }
+.row {
+    margin-left: 20px;
+    color: white;
 }
