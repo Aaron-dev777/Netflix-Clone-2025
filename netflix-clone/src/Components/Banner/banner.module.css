@@ -1,6 +1,6 @@
 /* Fullscreen Banner */
 .banner {
-  height: 115vh; /* Full viewport height */
+  height: 110vh; /* Full viewport height */
   width: 100%;
   color: white;
   object-fit: cover;
@@ -12,7 +12,7 @@
 /* Inner content positioning */
 .inner_banner {
 height: 190px;
-padding-top: 250px;
+padding-top: 300px;
 margin-left: 30px;
 }
 
@@ -23,7 +23,7 @@ padding-bottom: 0.3rem;
 }
 
 .inner_banner p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   width: 45rem;
   line-height: 1;
   padding: 1rem 0;
@@ -38,7 +38,7 @@ padding-bottom: 0.3rem;
   color: #fff;
   outline: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   border-radius: 5px;
   padding: 1rem 3rem;
@@ -58,7 +58,7 @@ padding-bottom: 0.3rem;
   background-color: #fff;
   border-radius: 30px;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding: 0.8rem 2rem;
   transition: background-color 0.3s, transform 0.3s ease-in-out;
 }
@@ -101,17 +101,17 @@ padding-bottom: 0.3rem;
   }
 
   .inner_banner h1 {
-    font-size: 2rem; /* Adjust font size */
+    font-size: 4rem; /* Adjust font size */
   }
 
   .inner_banner p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     max-width: 80%; /* Ensure text isn't too wide */
   }
 
   .btn,
   .play {
-    font-size: 1rem;
+    font-size: 2rem;
     padding: 0.8rem 2rem;
   }
 
